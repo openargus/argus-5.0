@@ -3846,6 +3846,14 @@ ArgusIpPacket(u_char *user, const struct pcap_pkthdr *h, const u_char *p)
 #endif
 }
 
+void
+ArgusPktapPacket(u_char *user, const struct pcap_pkthdr *h, const u_char *p)
+{
+
+#ifdef ARGUSDEBUG
+   ArgusDebug (8, "ArgusPktapPacket (%p, %p, %p) returning\n", user, h, p);
+#endif
+}
 
 #define ENC_HDRLEN      12
 
